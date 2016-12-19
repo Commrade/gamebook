@@ -138,3 +138,5 @@ function questionOneOneOneTwo(){
 		"the police.\n\n"+
 		"YOU WON");
 };
+
+questionOne();
