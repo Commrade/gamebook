@@ -1,4 +1,6 @@
 function newGame(){
+	name();
+	questionOne();
 };
 
 function name(){

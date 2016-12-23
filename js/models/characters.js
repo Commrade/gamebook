@@ -6,10 +6,34 @@ function Stranger(name) {
 
 //This will be your friend in the story
 var dave = {
-	taunts = {
-		chicken: "Come on man, don't be such a chicken.";
-		baby: "I'd give you a bottle to suck on, but I'm fresh out. Guess the little baby will just have to use his thumb.";
-		help: "Oh crap, help me!";
-		advise: "Maybe we should just run for it.";
+	taunts: ["What's the matter too scared?", "Why are you always a baby?", "Big chicken."],
+	help: [" please help me!!", " get them off me!!", " don't let them get you too!!"]
+};
+
+//pick random help
+dave.callHelp = function(){
+	var random = Math.floor((Math.random() * 3) + 1);
+	if(random === 1){
+		return dave.help[0];
 	}
+	else if(random === 2){
+		return dave.help[1];
+	}
+	else{
+		return dave.help[2];
+	};
+};
+
+//pick random taunt
+dave.callTaunt = function(){
+	var random = Math.floor((Math.random() * 3) + 1);
+	if(random === 1){
+		return dave.taunts[0];
+	}
+	else if(random === 2){
+		return dave.taunts[1];
+	}
+	else {
+		return dave.taunts[2];
+	};
 };
