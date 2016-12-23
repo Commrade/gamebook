@@ -209,3 +209,195 @@ function questionOneTwoOne(){
 		questionOneTwoOne();
 	};
 };
+
+function questionOneThree(){
+	var answer = prompt("You and Dave decide to walk the long\n"+
+		"way back to your house. About half way into your walk\n"+
+		"you pass the old abandoned house. You keep walking\n"+
+		"but Dave stops and stares at the top floor window.\n"+
+		"Dave says,'Hey wait a minute I saw an outline of\n"+
+		"a head in the window.' You tell him he's seeing\n"+
+		"things. He insists he saw something and asks\n"+
+		"if you want to explore the house. You\n"+
+		"want to continue home but know he will\n"+
+		"tease you forever otherwise. \n\n"+
+		"Enter your choice: 'explore' or 'walk'.").toLowerCase();
+	if(answer === 'explore'){
+		questionOneThreeOne();
+	}
+	else if(answer === 'walk'){
+		questionOneThreeTwo();
+	}
+	else{
+		alert("I didn't quite understand that try 'explore' or 'walk'.");
+		questionOneThree();
+	};
+};
+
+function questionOneThreeOne(){
+	var answer = prompt("You and Dave enter the backyard of\n"+
+		"the house. You try the backdoor but it is locked.\n"+
+		"There's a window that is cracked though and you\n"+
+		"push it open and enter the house. You and Dave\n"+
+		"scan the ground floor and find it is completely\n"+
+		"empty aside from some trash on the floor. Dave\n"+
+		"tells you he wants to explore the basement.\n"+
+		"You start to get a bad feeling about this \n"+
+		"and know this might be your only chance to\n"+
+		"leave.\n\n"+
+		"Enter your choice: 'leave' or 'basement'.").toLowerCase();
+	if(answer === 'leave'){
+		alert("You tell Dave you've seen enough and\n"+
+			"both leave the house the way you entered.");
+		questionOneThreeTwo();
+	}
+	else if(answer === 'basement'){
+		questionOneThreeOneOne();
+	}
+	else{
+		alert("I didn't quite catch that try 'leave' or 'basement'.");
+		questionOneThreeOne();
+	};
+};
+
+function questionOneThreeTwo(){
+	var answer = prompt("You keep walking down the road toward\n"+
+		"your house. After a few moments Dave says,'Hey, did you\n"+
+		"hear that?' You reply,'Hear what?' Dave then\n"+
+		"explains he heard what sounded like a door creak\n"+
+		"open then slam closed in the distance. You tell him\n"+
+		"he's hearing things and keep walking. A few minutes\n"+
+		"later you hear footsteps coming from behind you.\n"+
+		"You both turn to see a woman standing about 30 feet\n"+
+		"behind you. She looks away as you look at her.\n"+
+		"The next few minutes you realize as you walk,\n"+
+		"she walks, and when you stop, she stops.\n"+
+		"Dave decides he's had enough of this you both\n"+
+		"turn to confront the lady. When you turn you\n"+
+		"find her standing much closer than before.\n"+
+		"This time instead of her avoiding eye contact\n"+
+		"she stares intently at you. Then a creepy\n"+
+		"smile grows across her face. You then look to see\n"+
+		"a large man lunge from behind a bush and\n"+
+		"grab Dave.\n"+
+		"Dave: \n"+//Dave calls for help
+		"Your house is only a short ways\n"+
+		"away from here you could run and call for help\n"+
+		"or attempt to fight off the attacker.\n\n"+
+		"Enter your choice: 'run' or 'fight'.").toLowerCase();
+	if(answer === 'run'){
+		alert("You run back to your house and call the\n"+
+				"police. They arrive and find no trace of Dave\n"+
+				"or the two people. You tell them of the house\n"+
+				"they investigate the house and find nothing.\n"+
+				"You never heard from or saw Dave again.");
+	}
+	else if(answer === 'fight'){
+		var survival = Math.floor((Math.random() * 2) + 1);
+		if(survival === 1){
+			alert("You jump on the mans back and begin\n"+
+				"flailing your arms smacking his face until\n"+
+				"he releases Dave. You slide off his back\n"+
+				"and help Dave to his feet. The man charges\n"+
+				"you but Dave punches him causing him to\n"+
+				"stumble back and to the ground.\n"+
+				"The woman screams and the two of you run\n"+
+				"the final distance to your house. You call\n"+
+				"the police and they find the two, hiding\n"+
+				"in a bush across from your house. They were\n"+
+				"arrested.\n\n"+
+				"YOU WON");
+		}
+		else{
+			alert("You try to fight the man but the woman\n"+
+				"tackles you to the ground. She keeps clawing\n"+
+				"at your face and aggressively hitting you.\n"+
+				"You continue to hear Dave screaming for help.\n"+
+				"Dave: \n"+//enter daves help here
+				"Eventually Daves screams stop then the man\n"+
+				"comes over and helps the woman. The two of you\n"+
+				"were never heard from again.\n\n"+
+				"GAME OVER");
+		};
+	}
+	else{
+		alert("I didn't quite understand that try 'run' or 'fight'.");
+		questionOneThreeTwo();
+	};
+};
+
+function questionOneThreeOneOne(){
+	var answer = prompt("You decide to explore the basement\n"+
+		"with Dave. You turn on your flashlights and descend\n"+
+		"the basement stairs. You scan the basment and find it empty\n"+
+		"there's a door on the otherside of the basement though.\n"+
+		"Do you explore the door or leave the basement.\n\n"+
+		"Enter your choice: 'door' or 'leave'.").toLowerCase();
+	if(answer === "door"){
+		alert("You enter the other room in the basement.\n"+
+			"You find a drain in the middle of the room clogged\n"+
+			"with organic material, amongst a sea of red liquid.\n"+
+			"You both run up the stairs to find a large man blocking\n"+
+			"your way. The two of you were never heard from again.\n\n"+
+			"GAME OVER");
+	}
+	else if(answer === "leave"){
+		questionOneThreeOneOneOne();
+	}
+	else{
+		alert("I didn't quite understand that try 'door' or 'leave'.");
+		questionOneThreeOneOne();
+	};
+};
+
+function questionOneThreeOneOneOne(){
+	var answer = prompt("You both leave the basement and start\n"+
+			"hearing footsteps from the floor above you approaching\n"+
+			"the stairs. You quickly run to the backdoor and struggle\n"+
+			"to open it. You run out of the house when you hear Dave\n"+
+			"scream for help.\n"+
+			"Dave: \n"+//enter dave help here
+			"You look back and see a large man is grabbing Dave.\n"+
+			"There's a woman standing behind the man staring at you too.\n"+
+			"You can run home and call for help or attempt to fight.\n\n"+
+			"Enter your choice: 'run' or 'fight'.").toLowerCase();
+	if(answer === 'run'){
+		alert("You run back to your house and call the\n"+
+				"police. They arrive and find no trace of Dave\n"+
+				"or the two people. You tell them of the house\n"+
+				"they investigate the house and find nothing.\n"+
+				"You never heard from or saw Dave again.");
+	}
+	else if(answer === 'fight'){
+		var survival = Math.floor((Math.random() * 2) + 1);
+		if(survival === 1){
+			alert("You jump on the mans back and begin\n"+
+				"flailing your arms smacking his face until\n"+
+				"he releases Dave. You slide off his back\n"+
+				"and help Dave to his feet. The man charges\n"+
+				"you but Dave punches him causing him to\n"+
+				"stumble back and to the ground.\n"+
+				"The woman screams and the two of you run\n"+
+				"the final distance to your house. You call\n"+
+				"the police and they find the two, hiding\n"+
+				"in a bush across from your house. They were\n"+
+				"arrested.\n\n"+
+				"YOU WON");
+		}
+		else{
+			alert("You try to fight the man but the woman\n"+
+				"tackles you to the ground. She keeps clawing\n"+
+				"at your face and aggressively hitting you.\n"+
+				"You continue to hear Dave screaming for help.\n"+
+				"Dave: \n"+//enter daves help here
+				"Eventually Daves screams stop then the man\n"+
+				"comes over and helps the woman. The two of you\n"+
+				"were never heard from again.\n\n"+
+				"GAME OVER");
+		};
+	}
+	else{
+		alert("I didn't quite understand that try 'run' or 'fight'.");
+		questionOneThreeOneOneOne();
+	};
+};
