@@ -1,11 +1,13 @@
+var name = "";
+
 function newGame(){
-	name();
+	giveName();
 	questionOne();
 };
 
-function name(){
-	var name = prompt("Enter your name: ");
-}
+function giveName(){
+	name = prompt("Enter your name: ");
+};
 
 function questionOne(){
 	var answer = prompt("You and your friend Dave\n"+
@@ -84,7 +86,7 @@ function questionOneOneTwo(){
 		"You hear frantic footsteps behind you from Dave and the\n"+
 		"pursuing clowns.  Then you hear a thud and laughter\n"+
 		"from the clowns followed by Dave's cry for help\n"+
-		"Dave: \n"+//insert Daves help here
+		"Dave: " + name + dave.callHelp() + "\n" +
 		"Do you go back for your friend or run home and\n"+
 		"call the police?\n\n"+
 		"Enter your choice: 'Dave' or 'run'.").toLowerCase();
@@ -125,7 +127,7 @@ function questionOneOneOneOne(){
 	alert("As you and Dave both sit rested against\n"+
 		"your trees, you suddenly hear rushed footsteps as a third clown\n"+
 		"grabs Dave. You hear Dave cry for help\n"+
-		"Dave: \n"+//insert Daves help here
+		"Dave: " + name + dave.callHelp() + "\n" +
 		"As you try to stand to do something the other clowns\n"+
 		"appear and you and Dave are never heard from again.\n\n"+
 		"GAME OVER");
@@ -282,7 +284,7 @@ function questionOneThreeTwo(){
 		"smile grows across her face. You then look to see\n"+
 		"a large man lunge from behind a bush and\n"+
 		"grab Dave.\n"+
-		"Dave: \n"+//Dave calls for help
+		"Dave: " + name + dave.callHelp() + "\n" +
 		"Your house is only a short ways\n"+
 		"away from here you could run and call for help\n"+
 		"or attempt to fight off the attacker.\n\n"+
@@ -358,7 +360,7 @@ function questionOneThreeOneOneOne(){
 			"the stairs. You quickly run to the backdoor and struggle\n"+
 			"to open it. You run out of the house when you hear Dave\n"+
 			"scream for help.\n"+
-			"Dave: \n"+//enter dave help here
+			"Dave: " + name + dave.callHelp() + "\n" +
 			"You look back and see a large man is grabbing Dave.\n"+
 			"There's a woman standing behind the man staring at you too.\n"+
 			"You can run home and call for help or attempt to fight.\n\n"+
@@ -391,7 +393,7 @@ function questionOneThreeOneOneOne(){
 				"tackles you to the ground. She keeps clawing\n"+
 				"at your face and aggressively hitting you.\n"+
 				"You continue to hear Dave screaming for help.\n"+
-				"Dave: \n"+//enter daves help here
+				"Dave: " + name + dave.callHelp() + "\n" +
 				"Eventually Daves screams stop then the man\n"+
 				"comes over and helps the woman. The two of you\n"+
 				"were never heard from again.\n\n"+
@@ -403,3 +405,5 @@ function questionOneThreeOneOneOne(){
 		questionOneThreeOneOneOne();
 	};
 };
+
+newGame();
