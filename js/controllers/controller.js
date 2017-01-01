@@ -224,7 +224,8 @@ function questionOneThree(){
 		"things. He insists he saw something and asks\n"+
 		"if you want to explore the house. You\n"+
 		"want to continue home but know he will\n"+
-		"tease you forever otherwise. \n\n"+
+		"tease you forever otherwise. \n"+
+		"Dave starts to tease you: " + dave.callTaunt() + "\n\n"+
 		"Enter your choice: 'explore' or 'walk'.").toLowerCase();
 	if(answer === 'explore'){
 		questionOneThreeOne();
@@ -252,7 +253,8 @@ function questionOneThreeOne(){
 		"Enter your choice: 'leave' or 'basement'.").toLowerCase();
 	if(answer === 'leave'){
 		alert("You tell Dave you've seen enough and\n"+
-			"both leave the house the way you entered.");
+			"both leave the house the way you entered.\n"+
+			"Dave teases you anyways: " + dave.callTaunt());
 		questionOneThreeTwo();
 	}
 	else if(answer === 'basement'){
@@ -317,7 +319,7 @@ function questionOneThreeTwo(){
 				"tackles you to the ground. She keeps clawing\n"+
 				"at your face and aggressively hitting you.\n"+
 				"You continue to hear Dave screaming for help.\n"+
-				"Dave: \n"+//enter daves help here
+				"Dave: " + name + dave.callHelp() + "\n" +
 				"Eventually Daves screams stop then the man\n"+
 				"comes over and helps the woman. The two of you\n"+
 				"were never heard from again.\n\n"+
